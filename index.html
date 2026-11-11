@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A beautiful digital wedding invitation">
+  <title>Our Wedding | A Digital Invitation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<script>
+const music = document.getElementById("bgMusic");
+
+document.addEventListener("click", function startMusic() {
+    music.play();
+}, { once: true });
+</script>
+
+</body>
+<body>
+  <audio id="bgMusic" loop autoplay>
+    <source src="assets/background-song.mp3" type="audio/mpeg">
+  </audio>
+  <header class="topbar">
+    <a class="brand" href="#home">♡ Our Wedding</a>
+    <nav><a href="#story">Our Story</a><a href="#events">Events</a><a href="#venue">Venue</a></nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-photo">
+        
+        <img src="assets/couple.jpg" alt="Bride and Groom">
+      </div>
+      <div class="hero-copy">
+        <p class="eyebrow">Together with our families</p>
+        <h1>We’re getting<br><span>married!</span></h1>
+        <p class="names">Arjun <i>&</i> Priya</p>
+        <p class="intro">We would be delighted to have you with us as we begin our new journey together.</p>
+        <div class="date-pill">12 December 2026 · 6:00 PM onwards</div>
+        <p class="count-label">Counting down to our big day</p>
+        <div id="countdown" class="countdown" aria-live="polite">Loading countdown…</div>
+      </div>
+    </section>
+
+    <section class="section" id="story">
+      <p class="eyebrow">A little about us</p>
+      <h2>Our Story</h2>
+      <p class="section-copy">From a beautiful friendship to a lifetime of togetherness, we can’t wait to celebrate with you.</p>
+      
+    <section class="section" id="story">
+      <p class="eyebrow">A little about us</p>
+      <h2>Our Story</h2>
+    
+      <p class="section-copy">
+        From a beautiful friendship to a lifetime of togetherness,
+        we can’t wait to celebrate with you.
+      </p>
+    
+      <div class="media-grid">
+    
+        <div class="memory-card">
+          <img src="assets/couple1.jpg"
+               alt="Our favourite memory"
+               class="memory-photo">
+          <p>One lovely memory ❤️</p>
+        </div>
+    
+        <div class="video-card">
+          <video controls playsinline preload="metadata"
+                 poster="assets/video-poster.svg">
+            <source src="assets/couple-video.mp4" type="video/mp4">
+            Your browser does not support video.
+          </video>
+          <p class="small-note">Our beautiful memories ❤️</p>
+        </div>
+    
+      </div>
+    </section>
+
+
+    <section class="section events" id="events">
+      <p class="eyebrow">Save the date</p>
+      <h2>Wedding Celebrations</h2>
+      <div class="event-list">
+        <article><span>✿</span><div><h3>Wedding Ceremony</h3><p>12 December 2026 · 6:00 PM onwards</p></div></article>
+        <article><span>❀</span><div><h3>Reception</h3><p>12 December 2026 · 7:00 PM onwards</p></div></article>
+      </div>
+    </section>
+
+    <section class="section venue" id="venue">
+      <p class="eyebrow">We hope you can join us</p>
+      <h2>Venue & Directions</h2>
+      <p><strong>Sri Lakshmi Mahal</strong><br>Tirunelveli, Tamil Nadu</p>
+      <a class="button secondary" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Sri+Lakshmi+Mahal+Tirunelveli">Open location in Google Maps</a>
+    </section>
+
+    <section class="section rsvp">
+      <p class="eyebrow">Kindly reply</p>
+      <h2>Will you join us?</h2>
+      <p>Tap below to confirm your presence with the hosts on WhatsApp.</p>
+      <!-- Change the phone number below to the host's number, including country code. -->
+      <a class="button" href="https://wa.me/919876543210?text=Hello%2C%20I%20would%20like%20to%20confirm%20my%20presence%20at%20your%20wedding." target="_blank" rel="noopener">Confirm on WhatsApp</a>
+    </section>
+  </main>
+
+  <footer>Made with love · Arjun & Priya</footer>
+  <script src="script.js"></script>
+  
+    <script>
+    function createFlower() {
+      const flower = document.createElement("div");
+    
+      flower.className = "floating-flower";
+      flower.innerHTML = ["🌸", "🌷", "🌺", "🌼"][
+        Math.floor(Math.random() * 4)
+      ];
+    
+      flower.style.left = Math.random() * 100 + "vw";
+      flower.style.fontSize = (15 + Math.random() * 15) + "px";
+    
+      document.body.appendChild(flower);
+    
+      setTimeout(() => flower.remove(), 9000);
+    }
+    
+    setInterval(createFlower, 1200);
+    </script>
+
+
+</body>
+</html>
